@@ -1,0 +1,26 @@
+/* Write your CSS here */
+* {
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
+.bg {
+  background-color: white;
+  min-height: 100vh;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bgCard {
+  background-image: linear-gradient(to bottom, #2b2c49, #b5b9ff);
+  height: 400px;
+  width: 400px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
