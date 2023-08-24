@@ -11,12 +11,31 @@ import Login from '../Login/index'
 import Logout from '../Logout/index'
 
 class Home extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {isLogin: false}
+  }
+
+  toggleLogin = () => {
+    this.setState(prevState => ({isLogin: !prevState.isLogin}))
+  }
+
   render() {
+    const {isLogin} = this.state
     return (
       <div className="bg">
         <div className="bgCard">
-          <Message />
-          <Login />
+          {isLogin ? (
+            <Message text="Welcome User" />
+          ) : (
+            <Message text="Please Login" />
+          )}
+
+          {isLogin ? (
+            <Logout onToggleLogin={this.toggleLogin} />
+          ) : (
+            <Login onToggleLogin={this.toggleLogin} />
+          )}
         </div>
       </div>
     )

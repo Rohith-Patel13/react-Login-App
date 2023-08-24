@@ -5,7 +5,8 @@ import './index.css'
 
 class Message extends Component {
   render() {
-    return <h1 className="messageLoginHead">Please Login</h1>
+    const {text} = this.props
+    return <h1 className="messageLoginHead">{text}</h1>
   }
 }
 

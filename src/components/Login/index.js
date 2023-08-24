@@ -4,30 +4,14 @@ import {Component} from 'react'
 import './index.css'
 
 class Login extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {isLoggedIn: props.isLogin}
-  }
-
-  btnLoginClicked = () => {
-    this.setState(prevState => ({
-      isLoggedIn: !prevState.isLoggedIn,
-    }))
-  }
-
   render() {
-    const {isLoggedIn} = this.state
-    console.log(isLoggedIn)
+    const {onToggleLogin} = this.props
     return (
-      <button type="button" className="btnLogin" onClick={this.btnLoginClicked}>
+      <button type="button" className="btnLogin" onClick={onToggleLogin}>
         Login
       </button>
     )
   }
-}
-
-Login.defaultProps = {
-  isLogin: false,
 }
 
 export default Login

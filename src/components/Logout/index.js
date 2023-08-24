@@ -5,8 +5,9 @@ import './index.css'
 
 class Logout extends Component {
   render() {
+    const {onToggleLogin} = this.props
     return (
-      <button type="button" className="btnLogout">
+      <button type="button" className="btnLogout" onClick={onToggleLogin}>
         Logout
       </button>
     )
