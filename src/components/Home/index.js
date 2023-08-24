@@ -11,10 +11,7 @@ import Login from '../Login/index'
 import Logout from '../Logout/index'
 
 class Home extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {isLogin: false}
-  }
+  state = {isLogin: false}
 
   toggleLogin = () => {
     this.setState(prevState => ({isLogin: !prevState.isLogin}))
